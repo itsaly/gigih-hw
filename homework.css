@@ -1,0 +1,10 @@
+.track-container {
+    background: #FFFBD0;
+    padding: 10px;
+    margin: 10px;
+    border: 5px solid #9C2A00;
+}
+
+.track-container img {
+    width: 150px;
+}
