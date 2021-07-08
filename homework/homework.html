@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <title>Delusic - Your Trusted Playlist</title>
         <link rel="stylesheet" href="homework.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="homework.js"></script>
     </head>
     <body>
         <h1>Create Playlist</h1>
@@ -15,10 +17,10 @@
             <input type="submit" onclick="alert('Will soon be uploaded to delusic!')">
         </form>
         <div class="track-container">
-            <img src="ehe.png">
-            <p>Track title</p>
-            <p>Artist</p>
-            <p>Album</p>
+            <img src="ehe.png" id="image">
+            <p id="track">Track title</p>
+            <p id="artist">Artist</p>
+            <p id="album">Album</p>
             <input type="submit" value="Select">
         </div>
     </body>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hands On</title>
+    </head>
+    <body>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+        </table>
+        <button onClick="buttonClicked()">Calculate</button>
+        <script>
+            const students = [
+                { name :"Alice", age: 20 },
+                { name: "Bob", age: 21 },
+                { name: "Jane", age: 20 }
+            ];
+
+            let table = document.getElementById("table");
+            students.forEach((student, idx) => {
+                let row = table.insertRow(idx+1);
+                let nameCell = row.insertCell(0);
+                nameCell.innerHTML = student.name;
+                let ageCell = row.insertCell(1);
+                ageCell.innerHTML = student.age;
+            });
+            
+            const averageAge = students => {
+                let totalAge = 0;
+                students.forEach((student) => {
+                    totalAge += student.age;
+                });
+                return totalAge / students.length;
+            }
+
+            const wait = time => {
+                return new Promise((resolve) => {
+                    setTimeout(resolve, time)
+                });
+            }
+
+            async function asyncFunc() {
+                console.log("calculation start");
+                wait(5000).then(() => console.log("age is " + averageAge(students)));
+                console.log("second call started");
+                await wait(2000).then(() => console.log("second call finished"));
+                console.log("third call started");
+                wait(5000).then(() => console.log("third call started"));
+            }
+
+            const buttonClicked = () => {
+                asyncFunc();
+            }       
+        </script>
+    </body>
+</html>
