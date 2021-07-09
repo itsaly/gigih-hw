@@ -2,9 +2,9 @@ axios.get("https://gist.githubusercontent.com/aryapradipta9/e6492383477803b23391
 .then(response => {
   const data = response.data;
   console.log(response);
-  document.getElementById("track").innerHTML = data.name;
-  document.getElementById("artist").innerHTML = data.artists[0].name;
-  document.getElementById("album").innerHTML = data.album.name;
+  document.getElementById("track").innerHTML = `Track title: ${data.name}`;
+  document.getElementById("artist").innerHTML = `Artist: ${data.artists[0].name}`;
+  document.getElementById("album").innerHTML = `Album: ${data.album.name}`;
   document.getElementById("image").src = data.album.images[1].url;
 })
 .catch(error => {
