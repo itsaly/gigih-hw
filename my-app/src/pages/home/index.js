@@ -4,7 +4,7 @@ function Layout() {
       <input type="text" />
       <input type="submit" value="Search" />
       <br />
-      <img src="https://media.giphy.com/media/Vh8pbGX3SGRwFDh3V0/source.gif" />
+      <img src="https://media.giphy.com/media/Vh8pbGX3SGRwFDh3V0/source.gif" alt=""/>
     </div>
   );
 }
