@@ -1,9 +1,9 @@
 const Gif = ({url, title}) => {
   return (
     <div>
-      <input type="text" />
+      {/* <input type="text" />
       <input type="submit" value="Search" />
-      <br />
+      <br /> */}
       <p>{title}</p>
       <img src={url} alt={title}/>
     </div>
