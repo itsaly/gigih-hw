@@ -1,5 +1,6 @@
-import Gif from './components/gif';
-import data from './data/gif';
+// import Gif from './components/gif';
+// import data from './data/gif';
+import { Search } from './components/search';
 
 function App() {
   const giphy_secret_key = process.env.REACT_APP_GIPHY_KEY;
@@ -9,7 +10,8 @@ function App() {
   return (
     <div>
       {/* {showGif} */}
-      {
+      <Search />
+      {/* {
         data.map(image => {
           return(
             (image.rating === "g") && (
@@ -17,7 +19,7 @@ function App() {
             )
           )
         })
-      }
+      } */}
     </div>
   );
 }
